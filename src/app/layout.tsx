@@ -1,5 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import Providers from '@/providers'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -11,7 +12,9 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({
 }) => {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   )
 }
